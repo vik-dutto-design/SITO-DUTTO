@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CERTIFICAZIONI</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <style>
+    /* Stili specifici per questa pagina per non intaccare main.css */
+    .cert-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .cert-text {
+      text-align: justify;
+      line-height: 1.6;
+    }
+    .cert-text h2 {
+      color: var(--accent-blue);
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--accent-red);
+      display: inline-block;
+    }
+    .pdf-box {
+      width: 100%;
+      height: 600px; /* Altezza ottimale per visibilità */
+      border-radius: 15px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+    @media (max-width: 992px) {
+      .cert-container { grid-template-columns: 1fr; }
+      .pdf-box { height: 500px; }
+    }
+  </style>
+</head>
+
+<body class="page-contatti"> 
+  <header class="ios26-nav">
+    <div class="ios26-nav-inner">
+      <div class="tab-indicator" id="tabIndicator"></div>
+      <a href="index.html" class="ios-item">Home</a>
+      <a href="lavorazioni.html" class="ios-item">Lavorazioni</a>
+      <a href="certificazioni.html" class="ios-item">Certificazioni</a>
+      <a href="contatti.html" class="ios-item">Contatti</a>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <section class="neumorph-panel">
+      <div class="cert-container">
+        <div class="cert-text">
+          <h2>Qualità Certificata</h2>
+          <p>
+            La <strong>DUTTO SEBASTIANO & C. S.n.c.</strong> ha ottenuto la sua prima certificazione di qualità il <strong>30 luglio 1999</strong>, dimostrando un impegno storico nel mantenimento di standard elevati per le proprie lavorazioni meccaniche di precisione.
+          </p>
+          <br>
+          <p>
+            Attualmente, il nostro sistema di gestione è stato verificato ed è risultato conforme ai requisiti della norma <strong>ISO 9001:2015</strong> (Certificato IT99/0216). Questa certificazione, rilasciata da SGS Italia S.p.A. e accreditata da Accredia, copre lo scopo delle lavorazioni meccaniche di precisione e la revisione di attrezzature e macchine meccaniche personalizzate per applicazioni industriali. 
+          </p>
+          <br>
+          <p>
+            L'attuale ciclo di certificazione è valido dal 15 maggio 2024 fino al 15 maggio 2027, a conferma della continuità e dell'affidabilità dei nostri processi produttivi nei settori IAF 17 e 18.
+          </p>
+        </div>
+
+        <div class="pdf-wrapper">
+          <div class="pdf-box">
+            <embed src="./img/ITNO_000216_GenericCertificate_Final (2).pdf" type="application/pdf" width="100%" height="100%" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Sede</h3>
+        <p>Via Forfice 9<br>12100 Cuneo</p>
+      </div>
+      <div class="footer-column">
+        <h3>Recapiti</h3>
+        <p><strong>+39 0171 346643</strong></p>
+        <a href="mailto:dutto.amministrazione@multiwire.net" class="footer-email">dutto.amministrazione@multiwire.net</a>
+      </div>
+      <div class="footer-column">
+        <h3>Orari</h3>
+        <div class="hours-grid">
+          <span class="day">Lun-Ven</span><span class="hours">08-12 / 14-18</span>
+          <span class="day">Sabato</span><span class="hours">08-12</span>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>Info Legali</h3>
+        <p>P.I. 01895170049</p>
+        <a href="javascript:void(0)" id="linkLegale" class="legal-link">Informazioni Legali</a>
+        <a href="javascript:void(0)" id="linkPrivacy" class="legal-link">Privacy Policy e Cookie Policy</a>
+      </div>
+    </div>
+    
+    <div class="footer-divider"></div>
+    <div class="copy-right">
+      <p>Designed by Dutto Vittoria &copy; <script>document.write(new Date().getFullYear());</script></p>
+    </div>
+  </footer>
+
+  <div id="modalLegale" class="modal">
+    <div class="modal-glass-container">
+      <div class="modal-content">
+        <span class="close-button" id="closeLegale">&times;</span>
+        <h2>Informazioni Legali</h2>
+        <div class="modal-separator"></div>
+        <p>I testi, le informazioni e gli altri dati pubblicati in questo sito hanno esclusivamente scopo informativo e non assumono alcun carattere di ufficialità.</p>
+        <p>Non assumiamo alcuna responsabilità per eventuali errori od omissioni di qualsiasi tipo.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalPrivacy" class="modal">
+    <div class="modal-glass-container">
+      <div class="modal-content">
+        <span class="close-button" id="closePrivacy">&times;</span>
+        <h2>Privacy & Cookie Policy</h2>
+        <div class="modal-separator"></div>
+        <div class="modal-body-scroll">
+          <h3>INFORMATIVA PRIVACY (GDPR)</h3>
+          <p>La presente informativa privacy, resa ai sensi dell'art. 13 del Regolamento UE 2016/679 ("GDPR")...</p>
+          <p><strong>(Testo privacy)</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>

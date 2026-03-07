@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CONTATTI</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+
+<body class="page-contatti"> <header class="ios26-nav">
+    <div class="ios26-nav-inner">
+      <div class="tab-indicator" id="tabIndicator"></div>
+      <a href="index.html" class="ios-item">Home</a>
+      <a href="lavorazioni.html" class="ios-item">Lavorazioni</a>
+      <a href="certificazioni.html" class="ios-item">Certificazioni</a>
+      <a href="contatti.html" class="ios-item">Contatti</a>
+    </div>
+  </header>
+
+
+<div class="page-wrap">
+  <div class="content-grid three-cols">
+    
+    <div class="neumorph-panel contact-box">
+      <h2 class="contact-title">Recapiti</h2>
+      <div class="contact-item">
+        <i class="bi bi-geo-alt-fill"></i>
+        <p>Via Forfice 9<br>12100 Cuneo (CN)</p>
+      </div>
+      <div class="contact-item">
+        <i class="bi bi-telephone-fill"></i>
+        <p>+39 0171 346643<br>+39 0171 346262</p>
+      </div>
+      <div class="contact-item">
+        <i class="bi bi-envelope-at-fill"></i>
+        <p><a href="mailto:dutto.amministrazione@multiwire.net">dutto.amministrazione@multiwire.net</a></p>
+      </div>
+      <div class="contact-item">
+        <i class="bi bi-clock-fill"></i>
+        <p>Lun-Ven: 08-12 / 14-18<br>Sabato: 08-12</p>
+      </div>
+    </div>
+
+    <div class="neumorph-panel contact-box">
+      <h2 class="contact-title">Inviaci un messaggio</h2>
+      <form class="contact-form" action="mailto:dutto.amministrazione@multiwire.net" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Nome e Cognome" required>
+        <input type="email" name="email" placeholder="La tua Email" required>
+        <textarea name="message" rows="5" placeholder="Come possiamo aiutarti?" required></textarea>
+        <button type="submit" class="send-btn">Invia Messaggio</button>
+      </form>
+    </div>
+
+    <div class="neumorph-panel contact-box map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.4895697843776!2d7.57397117697819!3d44.41059797107627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cd6856866cfeb5%3A0xcddb4d20c7b57975!2sDutto%20Sebastiano%20e%20C.!5e1!3m2!1sit!2sit!4v1772814843553!5m2!1sit!2sit" 
+        width="100%" height="100%" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy">
+    </iframe>
+    </div>
+
+  </div>
+</div>
+<footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Sede</h3>
+        <p>Via Forfice 9<br>12100 Cuneo</p>
+      </div>
+      <div class="footer-column">
+        <h3>Recapiti</h3>
+        <p><strong>+39 0171 346643</strong></p>
+        <a href="mailto:dutto.amministrazione@multiwire.net" class="footer-email">dutto.amministrazione@multiwire.net</a>
+      </div>
+      <div class="footer-column">
+        <h3>Orari</h3>
+        <div class="hours-grid">
+          <span class="day">Lun-Ven</span><span class="hours">08-12 / 14-18</span>
+          <span class="day">Sabato</span><span class="hours">08-12</span>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>Info Legali</h3>
+        <p>P.I. 01895170049</p>
+        <a href="javascript:void(0)" id="linkLegale" class="legal-link">Informazioni Legali</a>
+        <a href="javascript:void(0)" id="linkPrivacy" class="legal-link">Privacy Policy e Cookie Policy</a>
+      </div>
+    </div>
+    
+    <div class="footer-divider"></div>
+    <div class="copy-right">
+      <p>Designed by Dutto Vittoria &copy; <script>document.write(new Date().getFullYear());</script></p>
+    </div>
+  </footer>
+<div id="modalLegale" class="modal">
+    <div class="modal-glass-container">
+      <div class="modal-content">
+        <span class="close-button" id="closeLegale">&times;</span>
+        <h2>Informazioni Legali</h2>
+        <div class="modal-separator"></div>
+        <p>I testi, le informazioni e gli altri dati pubblicati in questo sito hanno esclusivamente scopo informativo e non assumono alcun carattere di ufficialità.</p>
+        <p>Non assumiamo alcuna responsabilità per eventuali errori od omissioni di qualsiasi tipo.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalPrivacy" class="modal">
+    <div class="modal-glass-container">
+      <div class="modal-content">
+        <span class="close-button" id="closePrivacy">&times;</span>
+        <h2>Privacy & Cookie Policy</h2>
+        <div class="modal-separator"></div>
+        <div class="modal-body-scroll">
+          <h3>INFORMATIVA PRIVACY (GDPR)</h3>
+          <p>La presente informativa privacy, resa ai sensi dell'art. 13 del Regolamento UE 2016/679 ("GDPR")...</p>
+          <p><strong>(Incolla qui tutto il tuo testo della privacy)</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
