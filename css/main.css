@@ -36,7 +36,7 @@ body { font-family: "Segoe UI", sans-serif; background: var(--bg); color: var(--
 .ios-item { 
   background: none; 
   border: none; 
-  font-weight: 800; 
+  font-weight: 600; 
   cursor: pointer; 
   color: var(--accent-blue); 
   font-size: 18px; 
@@ -83,6 +83,7 @@ body { font-family: "Segoe UI", sans-serif; background: var(--bg); color: var(--
 .content-grid { display: grid; gap: 25px; width: 100%; }
 .full-width { grid-template-columns: 1fr; }
 .three-cols { grid-template-columns: repeat(3, 1fr); }
+.two-cols { grid-template-columns: repeat(2, 1fr); }
 
 /* HERO E ANIMAZIONE LOGO - CORRETTO PER RESPONSIVITÀ */
 /* HERO RESPONSIVE E SFONDO TOTALE */
@@ -112,6 +113,17 @@ footer { background: var(--accent-blue); color: #fff; padding: 60px 20px 30px; m
 .footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; }
 .footer-column { flex: 1; min-width: 220px; text-align: center; }
 .legal-link { color: #fff; text-decoration: underline; cursor: pointer; display: block; margin-top: 10px; }
+
+.footer-email {
+  color: #ffffff;          /* Lo rende bianco */
+  text-decoration: none;   /* Rimuove la sottolineatura (opzionale, ma più pulito) */
+  transition: opacity 0.3s;
+}
+
+.footer-email:hover {
+  opacity: 0.8;            /* Un leggero effetto al passaggio del mouse */
+  text-decoration: underline; /* Riappare la sottolineatura solo all'hover */
+}
 
 .footer-divider {
   width: 100%;
@@ -597,3 +609,221 @@ body {
 }
 /************************************************* PAGINA CONTATTI  ***********************************************************/
 
+/************************************************* ELENCO PUNTATO  ***********************************************************/
+
+/* Stile per le liste personalizzate nel carosello */
+.custom-list {
+  list-style: none; /* Rimuove i pallini standard */
+  padding-left: 0;
+  margin-top: 10px;
+  text-align: left; /* Allinea a sinistra la lista anche se il contenitore è giustificato */
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 20px; /* Spazio per il trattino */
+  margin-bottom: 6px;
+  line-height: 1.4;
+  font-size: 14px; /* Leggermente più piccolo per far stare tutto nei box */
+}
+
+/* Crea il trattino personalizzato */
+.custom-list li::before {
+  content: "—"; 
+  position: absolute;
+  left: 0;
+  color: var(--accent-red); /* Usa il rosso aziendale */
+  font-weight: bold;
+}
+
+/* Sistema l'interlinea generale dei box */
+.des {
+  line-height: 1.5;
+}
+
+
+
+/* AREA PULSANTE FISSA */
+.fixed-action-area {
+  position: absolute;
+  bottom: 150px; 
+  left: 100px;
+  z-index: 1000; /* Superiore a .item ma sotto il menu */
+  pointer-events: auto;
+}
+
+.btn-parco-fixed {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 30px;
+  background-color: var(--accent-red);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border-radius: 20px; /* Molto squadrato, stile tecnico/industriale */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-parco-fixed i {
+  font-size: 18px;
+}
+
+/* Effetto Hover Coerente */
+.btn-parco-fixed:hover {
+  background-color: #ffffff;
+  color: var(--accent-red);
+  transform: translateY(-2px);
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.5);
+  border-color: var(--accent-red);
+}
+
+/* Gestione per Mobile (per non farlo sovrapporre ai testi che scorrono) */
+@media (max-width: 900px) {
+  .fixed-action-area {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 180px; /* Lo alziamo sopra le frecce */
+    width: 80%;
+  }
+  .btn-parco-fixed {
+    justify-content: center;
+  }
+}
+
+/************************************************* PARCO MACCHINE  ***********************************************************/
+
+
+/* --- STILI PARCO MACCHINE --- */
+
+.hero-mechanical {
+  text-align: center;
+  background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(200,210,230,0.3) 100%);
+  margin-bottom: 40px;
+}
+
+.accent-title {
+  font-size: 3rem;
+  color: var(--accent-blue);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.stats-bar span {
+  background: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--accent-red);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.machine-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left !important; /* Sovrascrive il justify della tua classe base */
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 2px solid var(--accent-red);
+  padding-bottom: 15px;
+}
+
+.card-header i {
+  font-size: 2rem;
+  color: var(--accent-blue);
+}
+
+.card-header h3 {
+  color: var(--accent-blue);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+.machine-list {
+  list-style: none;
+  padding: 0;
+}
+
+.machine-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  position: relative;
+  padding-left: 20px;
+}
+
+.machine-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent-red);
+  font-weight: bold;
+}
+
+.machine-list li small {
+  display: block;
+  color: #666;
+  font-style: italic;
+  margin-top: 3px;
+}
+
+.iso-footer {
+  margin-top: 20px;
+  padding: 20px 40px !important;
+  background: var(--accent-blue);
+  color: white;
+}
+
+.iso-badge {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.iso-badge i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.iso-badge h4 {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.iso-badge p {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+/* Fix mobile */
+@media (max-width: 768px) {
+  .accent-title { font-size: 2rem; }
+  .stats-bar { gap: 10px; }
+}
